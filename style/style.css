@@ -1,3 +1,9 @@
+/* Fonts */
+@font-face {
+    font-family: CabinSketch;
+    src: url(fonts/CabinSketch-Bold.ttf);
+}
+
 /* Basisstijlen (mobile-first) */
 *, *:before, *:after {
     -webkit-box-sizing: inherit;
@@ -28,6 +34,11 @@ a:visited {
     color: inherit;
 }
 
+address {
+    text-decoration: none;
+    font-style: normal;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -52,6 +63,11 @@ nav {
 nav img {
     max-width: 70px;
     height: auto;
+}
+
+hr {
+    width: 100%;
+    color: #fff;
 }
 
 .navbuttons {
@@ -393,20 +409,86 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     margin: 0 auto;
     padding: 0 20px;
+    gap: 25px;
+}
+
+.footer-content article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .ideeenbox {
-    
+    margin-bottom: 35px;
+}
+
+.ideeenbox p {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.ideeenbox p:last-child {
+    font-weight: 900;
 }
 
 .ideeenbox img {
     width: 70%;
+    margin: 30px 0;
+}
+
+.footer-content article .painttxt {
+    width: 90%;
+    font-size: 1.3rem;
+    font-family: CabinSketch;
+}
+
+.footer-content .footerdata {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.footerdataleft, .footerdataright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footerdatatxt {
+    width: 45%;
+}
+
+.footerdatatxt:first-child {
+    text-align: right;
+}
+
+.footerdata img {
+    display: none;
+}
+
+.footer-content .footersocials {
+    display: none;
+}
+
+.footer-content .footerphone {
+    font-size: 1.15rem;
+    font-weight: 900;
 }
 
 /* Responsive voor grotere schermen */
 @media (min-width: 800px) {
+    hr {
+        width: 55%;
+    }
+
     nav {
         padding: 0 20px;
     }
@@ -478,6 +560,11 @@ footer {
     .menusectionhome article img {
         width: 40%;
         max-width: 500px;
+    }
+
+    .footer-content article .painttxt {
+        width: 55%;
+        font-size: 1.6rem;
     }
 }
 
@@ -602,4 +689,51 @@ footer {
         width: 30%;
         height: 60%;
     }
+    
+    .ideeenbox p {
+        font-size: 1.55rem;
+        width: 65%;
+    }
+
+    .footer-content article .painttxt {
+        width: 35%;
+        font-size: 2rem;
+    }
+
+    .footer-content .footerdata {
+        width: 50%;
+        justify-content: space-between;
+    }
+
+    .footerdataleft {
+        justify-content: start;
+    }
+
+    .footerdataright {
+        justify-content: end;
+    }
+
+    .footerdataleft, .footerdataright {
+        width: 33%;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .footerdata img {
+        display: flex;
+        width: 15%;
+    }
+
+    .footer-content .footersocials {
+        display: flex;
+        width: fit-content;
+        font-size: 2.8rem;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .footerdatatxt {
+        width: 45%;
+    }
+    
 }
