@@ -383,7 +383,7 @@ nav img {
 
 /* Footer Stuff */
 footer {
-    background-color: rgb(27, 27, 27);
+    background-color: #EA4E1B;
     color: #fff;
     padding: 20px 0;
     margin-top: auto;
@@ -391,10 +391,18 @@ footer {
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+.ideeenbox {
+    
+}
+
+.ideeenbox img {
+    width: 70%;
 }
 
 /* Responsive voor grotere schermen */
