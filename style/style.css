@@ -21,6 +21,7 @@ html, body {
 a {
     text-decoration: none;
     color: #fff;
+    transition: 0.5s;
 }
 
 a:visited {
@@ -38,7 +39,7 @@ body {
 header {
     background-color: #EA4E1B;
     padding: 15px 0;
-    border-bottom: 4px solid #fff;
+    border-bottom: 7px solid #fff;
 }
 
 nav {
@@ -195,7 +196,7 @@ nav img {
     font-weight: 900;
 }
 
-.maininfo article p {
+.zwarteteksthome {
     font-size: 1.4rem;
     color: #000;
 }
@@ -215,13 +216,13 @@ nav img {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.vragensection span {
+.vragensection h2 {
     font-size: 1.8rem;
     font-weight: 900;
     font-style: normal;
 }
 
-.bestelsectionhome {
+.bestelsectionhome , .menusectionhome {
     width: 100%;
     background-image: url('../img/bestelfoto.jpg');
     background-size: cover;
@@ -232,37 +233,168 @@ nav img {
     padding: 20px;
 }
 
-.bestelsectiontekst p {
+.bestelsectiontekst {
     color: #fff;
-    font-size: 1.8rem;
-    font-weight: 900;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.bestelsectiontekst p:last-child {
-    font-size: 1rem;
-    font-weight: 100;
+.bestelsectiontekst h2 {
+    font-size: 1.8rem;
+    font-weight: 900;
 }
 
-.naastdriestrepen {
+.bestelsectiontekst p {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.naastafbeelding {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.naastdriestrepen a {
+.naastafbeelding a {
     width: fit-content;
     margin-top: 15px;
-    padding: 5px;
+    padding: 10px;
     font-size: 1.4rem;
     font-weight: 900;
     background-color: #FFD747;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.naastafbeelding a:hover {
+    background-color: #d1a813;
+}
+
 .bestelsectionhome img {
     display: none !important;
+}
+
+.socialemedia, .nieuwsbrief {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px;
+}
+
+.socialemedia article, .nieuwsbrief article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.socialemedia article div {
+    display: flex;
+    gap: 30px;
+}
+
+.socialemedia a {
+    color: #FFD747;
+    font-size: 6rem;
+    
+}
+
+.socialemedia a:last-of-type {
+    color: #EA4E1B;
+}
+
+.socialemedia article p {
+    color: #FFD747;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 4px;
+}
+
+.socialemedia img {
+    width: 100%;
+}
+
+.menusectionhome {
+    justify-content: center;
+    align-items: center;
+    background-image: none;
+    background-color: #FFD747;
+}
+
+.menusectionhome article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    text-align: center;
+}
+
+.menusectionhome article img {
+    width: 60%;
+}
+
+.naastafbeelding .buttoncontainer {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.naastafbeelding .greyorderbutton {
+    background-color: #3D3D3C;
+    margin-right: 15px;
+}
+
+.naastafbeelding .greyorderbutton:hover {
+    background-color: #000;
+}
+
+.naastafbeelding .orangemenubutton {
+    background-color: #EA4E1B;
+}
+
+.naastafbeelding .orangemenubutton:hover {
+    background-color: #7f290c;
+}
+
+.nieuwsbrief {
+    background-color: #3D3D3C;
+    flex-direction: row;
+    border-bottom: 7px solid #fff;
+}
+
+.nieuwsbrief article {
+    align-items: start;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nieuwsbrief article h2 {
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.nieuwsbrief article p {
+    font-size: 0.6rem;
+}
+
+.nieuwsbrief input {
+    text-align: center;
+    width: 30%;
+    height: 100%;
+}
+
+/* Footer Stuff */
+footer {
+    background-color: rgb(27, 27, 27);
+    color: #fff;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* Responsive voor grotere schermen */
@@ -327,8 +459,17 @@ nav img {
         gap: 20px;
     }
     
-    .vragensection span {
+    .vragensection h2 {
         font-size: 2.6rem;
+    }
+
+    .socialemedia img {
+        width: 60%;
+    }
+
+    .menusectionhome article img {
+        width: 40%;
+        max-width: 500px;
     }
 }
 
@@ -363,29 +504,33 @@ nav img {
         font-size: 3.2rem;
     }
     
-    .bestelsectiontekst p {
-        font-size: 4rem;
+    .bestelsectiontekst h2 {
+        font-size: 3.25rem;
     }
-    
-    .bestelsectiontekst p:last-child {
-        font-size: 1.3rem;
+
+    .bestelsectiontekst p {
+        font-size: 1.6rem;
     }
     
     .bestelsectiontekst {
         margin-top: 5%;
     }
 
-    .naastdriestrepen {
+    .naastafbeelding {
         width: 50%;
     }
     
-    .naastdriestrepen a {
+    .naastafbeelding a {
         font-size: 2.1rem;
+    }
+
+    .bestelsectionhome {
+        padding: 0;
     }
 
     .bestelsectionhome article {
         display: flex;
-        margin: 240px 0;
+        margin: 200px 0;
         margin-left: 10%;
     }
     
@@ -396,5 +541,57 @@ nav img {
         transform: rotate(-30deg);
         margin-top: 1%;
         margin-right: 5px;
+    }
+
+    .socialemedia, .nieuwsbrief{
+        flex-direction: row;
+        padding: 80px;
+    }
+    
+    .socialemedia article div {
+        gap: 40px;
+    }
+    
+    .socialemedia a {
+        color: #FFD747;
+        font-size: 9rem;
+        
+    }
+    
+    .socialemedia a:last-of-type {
+        color: #EA4E1B;
+    }
+    
+    .socialemedia article p {
+        font-size: 1.6rem;
+    }
+
+    .socialemedia img {
+        width: 45%;
+        max-width: 1000px;
+    }
+
+    .menusectionhome article {
+        flex-direction: row;
+        text-align: left;
+        gap: 45px;
+        margin: 100px 0;
+    }
+
+    .nieuwsbrief{
+        padding: 30px;
+    }
+
+    .nieuwsbrief article h2 {
+        font-size: 1.95rem;
+    }
+    
+    .nieuwsbrief article p {
+        font-size: 1.2rem;
+    }
+    
+    .nieuwsbrief input {
+        width: 30%;
+        height: 60%;
     }
 }
