@@ -1,8 +1,21 @@
 /* Basisstijlen (mobile-first) */
-* {
-    margin: 0;
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
     padding: 0;
+    margin: 0;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
 }
 
 a {
@@ -12,10 +25,6 @@ a {
 
 a:visited {
     color: inherit;
-}
-
-html, body {
-    height: 100%;
 }
 
 body {
@@ -29,7 +38,7 @@ body {
 header {
     background-color: #EA4E1B;
     padding: 15px 0;
-    border-bottom: 5px solid #fff;
+    border-bottom: 4px solid #fff;
 }
 
 nav {
@@ -80,9 +89,9 @@ nav img {
 .navlinks {
     display: none;
     flex-direction: column;
-    background-color: #ffffff;
+    background-color: #EA4E1B;
     position: absolute;
-    top: 100px;
+    top: 133px;
     left: 0;
     right: 0;
     padding: 20px;
@@ -98,9 +107,9 @@ nav img {
 
 /* Content */
 .home {
-    width: 100%;
+    width: 95%;
     max-width: 2500px;
-    margin: 0 auto;
+    margin: 40px auto;
     background-color: #FFD747;
     display: flex;
     justify-content: space-evenly;
@@ -110,6 +119,7 @@ nav img {
 
 .hero-content { 
     margin: 0 auto;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,6 +129,17 @@ nav img {
 .autoimg {
     width: 100%;
     margin-top: 10px;
+    animation: slideIn 1.8s ease-out forwards;
+}
+
+/* Keyframe animatie voor autoimg */
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .welkomtxt {
@@ -128,8 +149,9 @@ nav img {
 }
 
 .welkomtxt p {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: #000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .welkomtxt h1 {
@@ -140,10 +162,11 @@ nav img {
 }
 
 .welkomtxt h1:last-child {
-    font-size: 4.6rem;
+    font-size: 4.8rem;
     white-space: nowrap;
     max-width: 100%;
-    width: fit-content;   
+    width: fit-content;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
 }
 
 .welkomtxt p i {
@@ -162,7 +185,11 @@ nav img {
     margin-top: 15px;
 }
 
-.maininfo article .bigorange {
+.orange {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.maininfo article .orange {
     font-size: 2.2rem;
     color: #EA4E1B;
     font-weight: 900;
@@ -173,8 +200,73 @@ nav img {
     color: #000;
 }
 
+.vragensection {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: #EA4E1B;
+    padding: 25px;
+    font-size: 1.1rem;
+    border-top: 4px solid #fff;
+    border-bottom: 4px solid #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.vragensection span {
+    font-size: 1.8rem;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.bestelsectionhome {
+    width: 100%;
+    background-image: url('../img/bestelfoto.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.bestelsectiontekst p {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 900;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bestelsectiontekst p:last-child {
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+.naastdriestrepen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.naastdriestrepen a {
+    width: fit-content;
+    margin-top: 15px;
+    padding: 5px;
+    font-size: 1.4rem;
+    font-weight: 900;
+    background-color: #FFD747;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bestelsectionhome img {
+    display: none !important;
+}
+
 /* Responsive voor grotere schermen */
-@media (min-width: 769px) {
+@media (min-width: 800px) {
     nav {
         padding: 0 20px;
     }
@@ -213,26 +305,48 @@ nav img {
         max-width: 50px; /* LOGO DESKTOP */
     }
 
+    .welkomtxt h1 {
+        font-size: 4.95rem;
+    }
+    
+    .welkomtxt h1:last-child {
+        font-size: 7.5rem;
+    }
+
+    .maininfo article .orange {
+        font-size: 3.5rem;
+    }
+
+    .autoimg {
+        width: 40%;
+    }
+
+    .vragensection {
+        font-size: 1.45rem;
+        flex-direction: row;
+        gap: 20px;
+    }
+    
+    .vragensection span {
+        font-size: 2.6rem;
+    }
+}
+
+@media (min-width: 1200px) {
     .home {
         flex-direction: row;
-        padding: 3%;
     }
 
     .welkomtxt {
         display: flex;
         flex-direction: column;
         text-align: right;
-        /*max-width: 360px;*/
         margin-top: 10px;
     }
 
     .hero-content {
         justify-content: start;
         align-items: start;
-    }
-
-    .autoimg {
-        width: 50%;
     }
 
     .welkomtxt h1 {
@@ -242,10 +356,45 @@ nav img {
     }
     
     .welkomtxt h1:last-child {
-        font-size: 9rem;
+        font-size: 9.45rem;
     }
 
-    .maininfo article .bigorange {
+    .maininfo article .orange {
         font-size: 3.2rem;
+    }
+    
+    .bestelsectiontekst p {
+        font-size: 4rem;
+    }
+    
+    .bestelsectiontekst p:last-child {
+        font-size: 1.3rem;
+    }
+    
+    .bestelsectiontekst {
+        margin-top: 5%;
+    }
+
+    .naastdriestrepen {
+        width: 50%;
+    }
+    
+    .naastdriestrepen a {
+        font-size: 2.1rem;
+    }
+
+    .bestelsectionhome article {
+        display: flex;
+        margin: 240px 0;
+        margin-left: 10%;
+    }
+    
+    .bestelsectionhome article img {
+        display: flex !important;
+        width: 5%;
+        height: 20%;
+        transform: rotate(-30deg);
+        margin-top: 1%;
+        margin-right: 5px;
     }
 }
