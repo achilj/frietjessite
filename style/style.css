@@ -1,0 +1,243 @@
+/* Basisstijlen (mobile-first) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:visited {
+    color: inherit;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #393939;
+    color: #fff;
+}
+
+header {
+    background-color: #EA4E1B;
+    padding: 15px 0;
+    border-bottom: 5px solid #fff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav img {
+    max-width: 70px;
+    height: auto;
+}
+
+.navbuttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbuttons a {
+    color: #fff;
+    background-color: #7f290c;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.navbuttons a:hover {
+    background-color: #411303;
+}
+
+.menu-toggle {
+    display: block;
+    cursor: pointer;
+}
+
+.bar {
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.navlinks {
+    display: none;
+    flex-direction: column;
+    background-color: #ffffff;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+}
+
+.navlinks.active {
+    display: flex;
+}
+
+.navlinks a {
+    margin-bottom: 10px;
+}
+
+/* Content */
+.home {
+    background-color: #FFD747;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-content {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.autoimg {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.welkomtxt {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.welkomtxt p {
+    font-size: 1.3rem;
+    color: #000;
+}
+
+.welkomtxt h1 {
+    font-size: 3rem;
+    white-space: nowrap;
+    max-width: 100%;
+    width: fit-content;
+}
+
+.welkomtxt h1:last-child {
+    font-size: 4.6rem;
+    white-space: nowrap;
+    max-width: 100%;
+    width: fit-content;   
+}
+
+.welkomtxt p i {
+    background-color: #fff;
+    color: #000;
+    border-radius: 50%;
+    font-size: 1rem;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    text-align: center;
+    line-height: 25px;
+}
+
+.maininfo article {
+    margin-top: 15px;
+}
+
+.maininfo article .bigorange {
+    font-size: 2.2rem;
+    color: #EA4E1B;
+    font-weight: 900;
+}
+
+.maininfo article p {
+    font-size: 1.4rem;
+    color: #000;
+}
+
+/* Stijlen voor grotere schermen */
+@media (min-width: 769px) {
+    nav {
+        padding: 0 20px;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .navlinks {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .navlinks a {
+        margin: 0 5px;
+    }
+
+    .navbuttons {
+        flex-direction: row;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .navbuttons a {
+        margin: 0 5px;
+    }
+
+    .navbuttons a:last-child {
+        margin-bottom: 0;
+    }
+
+    nav img {
+        max-width: 50px; /* LOGO DESKTOP */
+    }
+
+    .home {
+        flex-direction: row;
+        padding: 3%;
+    }
+
+    .welkomtxt {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        max-width: 360px;
+        margin-top: 10px;
+    }
+
+    .hero-content {
+        justify-content: start;
+        align-items: start;
+    }
+
+    .autoimg {
+        width: 50%;
+    }
+
+    .welkomtxt h1 {
+        font-size: 3rem;
+        white-space: nowrap;
+        max-width: 100%;
+    }
+    
+    .welkomtxt h1:last-child {
+        font-size: 6rem;
+    }
+}
