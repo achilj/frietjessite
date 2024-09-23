@@ -70,6 +70,13 @@ hr {
     color: #fff;
 }
 
+/* Veelvoorkomend */
+.flexbox-center-dc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .navbuttons {
     display: flex;
     flex-direction: column;
@@ -130,15 +137,6 @@ hr {
     background-color: #FFD747;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-}
-
-.hero-content { 
-    margin: 0 auto;
-    margin: 0;
-    display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
