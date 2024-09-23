@@ -202,21 +202,18 @@ hr {
     margin-top: 15px;
 }
 
-.orange {
+.maininfo h2 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.2rem;
+    color: #EA4E1B;
+    font-weight: 900;
 }
 
 .maininfo {
     width: 100%;
 }
 
-.maininfo article .orange {
-    font-size: 2.2rem;
-    color: #EA4E1B;
-    font-weight: 900;
-}
-
-.zwarteteksthome {
+.maininfo address, .maininfo p {
     font-size: 1.4rem;
     color: #000;
 }
@@ -242,7 +239,7 @@ hr {
     font-style: normal;
 }
 
-.bestelsectionhome , .menusectionhome {
+.bestelsectionhome , .menuenbestellen {
     width: 100%;
     background-image: url('../img/bestelfoto.jpg');
     background-size: cover;
@@ -302,14 +299,14 @@ hr {
     padding: 30px;
 }
 
-.socialemedia article, .nieuwsbrief article {
+.socialemedia .socialemediasection, .nieuwsbrief div {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.socialemedia article div {
+.socialemedia .socialemediasection div {
     display: flex;
     gap: 30px;
 }
@@ -324,7 +321,7 @@ hr {
     color: #EA4E1B;
 }
 
-.socialemedia article p {
+.socialemedia .socialemediasection p {
     color: #FFD747;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 4px;
@@ -334,14 +331,14 @@ hr {
     width: 100%;
 }
 
-.menusectionhome {
+.menuenbestellen {
     justify-content: center;
     align-items: center;
     background-image: none;
     background-color: #FFD747;
 }
 
-.menusectionhome article {
+.menuenbestellen .menuenbestellensection {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -349,7 +346,7 @@ hr {
     text-align: center;
 }
 
-.menusectionhome article img {
+.menuenbestellen .menuenbestellensection img {
     width: 60%;
 }
 
@@ -381,17 +378,17 @@ hr {
     border-bottom: 7px solid #fff;
 }
 
-.nieuwsbrief article {
+.nieuwsbrief div {
     align-items: start;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.nieuwsbrief article h2 {
+.nieuwsbrief div h2 {
     font-size: 1rem;
     font-weight: 900;
 }
 
-.nieuwsbrief article p {
+.nieuwsbrief div p {
     font-size: 0.6rem;
 }
 
@@ -547,7 +544,7 @@ footer {
         font-size: 7.5rem;
     }
 
-    .maininfo article .orange {
+    .maininfo h2 {
         font-size: 3.5rem;
     }
 
@@ -569,7 +566,7 @@ footer {
         width: 60%;
     }
 
-    .menusectionhome article img {
+    .menuenbestellen .menuenbestellensection img {
         width: 40%;
         max-width: 500px;
     }
@@ -611,7 +608,7 @@ footer {
         font-size: 9.45rem;
     }
 
-    .maininfo article .orange {
+    .maininfo h2 {
         font-size: 3.2rem;
     }
     
@@ -639,13 +636,13 @@ footer {
         padding: 0;
     }
 
-    .bestelsectionhome article {
+    .bestelsectionhome .bestelsection {
         display: flex;
         margin: 200px 0;
         margin-left: 10%;
     }
     
-    .bestelsectionhome article img {
+    .bestelsectionhome .bestelsection img {
         display: flex !important;
         width: 5%;
         height: 20%;
@@ -659,7 +656,7 @@ footer {
         padding: 80px;
     }
     
-    .socialemedia article div {
+    .socialemedia .socialemediasection div {
         gap: 40px;
     }
     
@@ -673,7 +670,7 @@ footer {
         color: #EA4E1B;
     }
     
-    .socialemedia article p {
+    .socialemedia .socialemediasection p {
         font-size: 1.6rem;
     }
 
@@ -682,7 +679,7 @@ footer {
         max-width: 1000px;
     }
 
-    .menusectionhome article {
+    .menuenbestellen .menuenbestellensection {
         flex-direction: row;
         text-align: left;
         gap: 45px;
@@ -693,11 +690,11 @@ footer {
         padding: 30px;
     }
 
-    .nieuwsbrief article h2 {
+    .nieuwsbrief div h2 {
         font-size: 1.95rem;
     }
     
-    .nieuwsbrief article p {
+    .nieuwsbrief div p {
         font-size: 1.2rem;
     }
     
