@@ -93,9 +93,7 @@ body {
 }
 
 header {
-    background-color: #EA4E1B;
     padding: 0.9rem 0;
-    border-bottom: 7px solid #fff;
 }
 
 nav {
@@ -117,16 +115,23 @@ hr {
 
 .navbuttons a {
     color: #fff;
-    background-color: #7f290c;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     border-radius: 0.3rem;
     padding: 0.6rem 1.25rem;
     margin: 0.3rem 0;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .navbuttons a:hover {
-    background-color: #411303;
+    color: #EA4E1B;
+}
+
+.navbuttons a:last-of-type {
+    padding-right: 0;
+}
+
+#navselected {
+    color: #EA4E1B;
 }
 
 .menu-toggle {
@@ -145,16 +150,28 @@ hr {
 .navlinks {
     display: none;
     flex-direction: column;
-    background-color: #EA4E1B;
+    background-color: #3D3D3C;
     position: absolute;
-    top: 133px;
+    top: 8rem;
     left: 0;
     right: 0;
     padding: 1.25rem;
+    animation: forwards rollOut 0.5s ease-out;
 }
 
 .navlinks.active {
     display: flex;
+}
+
+@keyframes rollOut {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .navlinks a {
@@ -392,6 +409,20 @@ hr {
     height: 100%;
 }
 
+/* Menu pagina */
+.menutxt {
+    text-align: center;
+}
+
+.menutxt h1 {
+    font-size: 4rem;
+}
+
+.menutxt p {
+    font-size: 1.4rem;
+    color: #000;
+}
+
 /* Footer Stuff */
 footer {
     background-color: #EA4E1B;
@@ -463,7 +494,7 @@ footer {
     }
 
     nav {
-        padding: 0 1.25rem;
+        padding: 0 2.5rem;
     }
 
     .menu-toggle {
@@ -476,6 +507,7 @@ footer {
         position: static;
         background-color: transparent;
         padding: 0;
+        animation: none;
     }
 
     .navlinks a {
