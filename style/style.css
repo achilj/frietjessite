@@ -1,3 +1,14 @@
+/* Kleuren */
+:root {
+    --color-white: #fff;
+    --color-black: #000;
+    --color-yellow: #FFD747;
+    --color-orange: #EA4E1B;
+    --color-grey: #3D3D3C;
+    --color-dark-grey: #7f290c;
+    --color-hover-yellow: #d1a813;
+}
+
 /* Fonts */
 @font-face {
     font-family: CabinSketch;
@@ -71,7 +82,7 @@ html, body {
 
 a {
     text-decoration: none;
-    color: #fff;
+    color: var(--color-white);
     transition: 0.5s;
 }
 
@@ -88,8 +99,8 @@ body {
     display: flex;
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #FFD747;
-    color: #fff;
+    background-color: var(--color-yellow);
+    color: var(--color-white);
 }
 
 header {
@@ -110,11 +121,11 @@ nav img {
 
 hr {
     width: 100%;
-    color: #fff;
+    color: var(--color-white);
 }
 
 .navbuttons a {
-    color: #fff;
+    color: var(--color-white);
     font-size: 1.4rem;
     border-radius: 0.3rem;
     padding: 0.6rem 1.25rem;
@@ -123,7 +134,7 @@ hr {
 }
 
 .navbuttons a:hover {
-    color: #EA4E1B;
+    color: var(--color-orange);
 }
 
 .navbuttons a:last-of-type {
@@ -131,7 +142,7 @@ hr {
 }
 
 #navselected {
-    color: #EA4E1B;
+    color: var(--color-orange);
 }
 
 .menu-toggle {
@@ -142,7 +153,7 @@ hr {
 .bar {
     width: 2.2rem;
     height: 0.3rem;
-    background-color: #fff;
+    background-color: var(--color-white);
     margin: 6px 0;
     transition: 0.4s;
 }
@@ -150,7 +161,7 @@ hr {
 .navlinks {
     display: none;
     flex-direction: column;
-    background-color: #3D3D3C;
+    background-color: var(--color-grey);
     position: absolute;
     top: 8rem;
     left: 0;
@@ -183,7 +194,7 @@ hr {
     width: 95%;
     max-width: 2500px;
     margin: 2.5rem auto;
-    background-color: #FFD747;
+    background-color: var(--color-yellow);
 }
 
 .autoimg {
@@ -208,7 +219,7 @@ hr {
 
 .welkomtxt p {
     font-size: 1.1rem;
-    color: #000;
+    color: var(--color-black);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -228,8 +239,8 @@ hr {
 }
 
 .welkomtxt p i {
-    background-color: #fff;
-    color: #000;
+    background-color: var(--color-white);
+    color: var(--color-black);
     border-radius: 50%;
     font-size: 1rem;
     width: 1.5rem;
@@ -246,7 +257,7 @@ hr {
 .maininfo h2 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2.2rem;
-    color: #EA4E1B;
+    color: var(--color-orange);
     font-weight: 900;
 }
 
@@ -256,17 +267,17 @@ hr {
 
 .maininfo address, .maininfo p {
     font-size: 1.4rem;
-    color: #000;
+    color: var(--color-black);
 }
 
 .vragensection {
     width: 100%;
     text-align: center;
-    background-color: #EA4E1B;
+    background-color: var(--color-orange);
     padding: 1.5rem;
     font-size: 1.1rem;
-    border-top: 0.25rem solid #fff;
-    border-bottom: 0.25rem solid #fff;
+    border-top: 0.25rem solid var(--color-white);
+    border-bottom: 0.25rem solid var(--color-white);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -286,7 +297,7 @@ hr {
 }
 
 .bestelsectiontekst {
-    color: #fff;
+    color: var(--color-white);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -296,7 +307,7 @@ hr {
 }
 
 .bestelsectiontekstdark {
-    color: #000;
+    color: var(--color-black);
 }
 
 .naastafbeelding a {
@@ -305,12 +316,12 @@ hr {
     padding: 0.6rem;
     font-size: 1.4rem;
     font-weight: 900;
-    background-color: #FFD747;
+    background-color: var(--color-yellow);
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .naastafbeelding a:hover {
-    background-color: #d1a813;
+    background-color: var(--color-hover-yellow);
 }
 
 .bestelsectionhome img {
@@ -318,7 +329,7 @@ hr {
 }
 
 .socialemedia, .nieuwsbrief {
-    background-color: #fff;
+    background-color: var(--color-white);
     padding: 1.9rem;
 }
 
@@ -327,17 +338,17 @@ hr {
 }
 
 .socialemedia a {
-    color: #FFD747;
+    color: var(--color-yellow);
     font-size: 6rem;
     
 }
 
 .socialemedia a:last-of-type {
-    color: #EA4E1B;
+    color: var(--color-orange);
 }
 
 .socialemedia .socialemediasection p {
-    color: #FFD747;
+    color: var(--color-yellow);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 0.25rem;
 }
@@ -350,7 +361,7 @@ hr {
     justify-content: center;
     align-items: center;
     background-image: none;
-    background-color: #FFD747;
+    background-color: var(--color-yellow);
 }
 
 .menuenbestellen .menuenbestellensection {
@@ -367,26 +378,26 @@ hr {
 }
 
 .naastafbeelding .greyorderbutton {
-    background-color: #3D3D3C;
+    background-color: var(--color-grey);
     margin-right: 0.9rem;
 }
 
 .naastafbeelding .greyorderbutton:hover {
-    background-color: #000;
+    background-color: var(--color-black);
 }
 
 .naastafbeelding .orangemenubutton {
-    background-color: #EA4E1B;
+    background-color: var(--color-orange);
 }
 
 .naastafbeelding .orangemenubutton:hover {
-    background-color: #7f290c;
+    background-color: var(--color-dark-grey);
 }
 
 .nieuwsbrief {
-    background-color: #3D3D3C;
+    background-color: var(--color-grey);
     flex-direction: row;
-    border-bottom: 7px solid #fff;
+    border-bottom: 7px solid var(--color-white);
 }
 
 .nieuwsbrief div {
@@ -420,13 +431,52 @@ hr {
 
 .menutxt p {
     font-size: 1.4rem;
-    color: #000;
+    color: var(--color-black);
+}
+
+.filter {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.filter label {
+    font-size: 1.3rem;
+    margin-right: 0.3rem;
+}
+
+.filter select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid var(--color-black);
+    border-radius: 0.3rem;
+    background-color: var(--color-orange);
+    color: var(--color-white);
+}
+
+.filter select:hover {
+    outline: none;
+}
+
+.products {
+    margin-top: 1.25rem;
+    padding: 1rem;
+    background-color: var(--color-orange);
+}
+
+.products article {
+    background-color: var(--color-grey);
+    border-radius: 1rem;
+}
+
+.productimg {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
 }
 
 /* Footer Stuff */
 footer {
-    background-color: #EA4E1B;
-    color: #fff;
+    background-color: var(--color-orange);
+    color: var(--color-white);
     padding: 1.25rem 0;
     margin-top: auto;
 }
@@ -649,13 +699,13 @@ footer {
     }
     
     .socialemedia a {
-        color: #FFD747;
+        color: var(--color-yellow);
         font-size: 9rem;
         
     }
     
     .socialemedia a:last-of-type {
-        color: #EA4E1B;
+        color: var(--color-orange);
     }
 
     .socialemedia img {
