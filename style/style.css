@@ -328,7 +328,7 @@ hr {
     display: none !important;
 }
 
-.socialemedia, .nieuwsbrief {
+.socialemedia, .nieuwsbrief, .allergie {
     background-color: var(--color-white);
     padding: 1.9rem;
 }
@@ -394,7 +394,7 @@ hr {
     background-color: var(--color-dark-grey);
 }
 
-.nieuwsbrief {
+.nieuwsbrief, .allergie {
     background-color: var(--color-grey);
     flex-direction: row;
     border-bottom: 7px solid var(--color-white);
@@ -436,12 +436,12 @@ hr {
 
 .filter {
     text-align: center;
-    margin-top: 1rem;
 }
 
 .filter label {
     font-size: 1.3rem;
     margin-right: 0.3rem;
+    color: var(--color-black);
 }
 
 .filter select {
@@ -458,19 +458,44 @@ hr {
 }
 
 .products {
-    margin-top: 1.25rem;
-    padding: 1rem;
-    background-color: var(--color-orange);
+    margin: 1rem 0;
+    gap: 1.3rem;
 }
 
 .products article {
+    width: 80%;
     background-color: var(--color-grey);
-    border-radius: 1rem;
+    border-radius: 0.5rem;
+}
+
+.products article:hover {
+    transform: scale(1.03);
+    transition: 0.25s;
+}
+
+.products article div {
+    padding: 0.75rem;
+}
+
+.products article h3 {
+    font-size: 1.5rem;
+}
+
+.products article p {
+    font-size: 1.2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+
+.products article .price {
+    font-weight: 700;
+    font-size: 1.2rem;
 }
 
 .productimg {
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
+    width: 100%;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
 }
 
 /* Footer Stuff */
@@ -617,6 +642,16 @@ footer {
         max-width: 500px;
     }
 
+    .products {
+        margin: 2rem 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .products article {
+        width: 40%;
+    }
+
     .footer-content article .painttxt {
         width: 55%;
         font-size: 1.6rem;
@@ -689,7 +724,7 @@ footer {
         margin-right: 0.3rem;
     }
 
-    .socialemedia, .nieuwsbrief{
+    .socialemedia, .nieuwsbrief, .allergie {
         flex-direction: row;
         padding: 80px;
     }
@@ -737,6 +772,33 @@ footer {
         height: 60%;
     }
     
+    .products {
+        margin: 2rem 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .products article {
+        width: 25%;
+        max-width: 550px;
+    }
+
+    .products article h3 {
+        font-size: 1.75rem;
+    }
+    
+    .products article .price {
+        font-size: 1.5rem;
+    }
+
+    .allergie h2 {
+        font-size: 2.5rem;
+    }
+
+    .allergie p {
+        font-size: 1.6rem;
+    }
+
     .ideeenbox p {
         width: 65%;
     }
