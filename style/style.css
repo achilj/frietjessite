@@ -724,9 +724,9 @@ footer {
         margin-right: 0.3rem;
     }
 
-    .socialemedia, .nieuwsbrief, .allergie {
+    .socialemedia, .nieuwsbrief {
         flex-direction: row;
-        padding: 80px;
+        padding: 5rem;
     }
     
     .socialemedia .socialemediasection div {
@@ -789,6 +789,11 @@ footer {
     
     .products article .price {
         font-size: 1.5rem;
+    }
+
+    .allergie {
+        flex-direction: column;
+        padding: 2.5rem;
     }
 
     .allergie h2 {
