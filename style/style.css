@@ -434,29 +434,6 @@ hr {
     color: var(--color-black);
 }
 
-.filter {
-    text-align: center;
-}
-
-.filter label {
-    font-size: 1.3rem;
-    margin-right: 0.3rem;
-    color: var(--color-black);
-}
-
-.filter select {
-    padding: 0.5rem;
-    font-size: 1rem;
-    border: 0.1rem solid var(--color-black);
-    border-radius: 0.3rem;
-    background-color: var(--color-orange);
-    color: var(--color-white);
-}
-
-.filter select:hover {
-    outline: none;
-}
-
 .products {
     margin: 1rem 0;
     gap: 1.3rem;
@@ -793,15 +770,15 @@ footer {
 
     .allergie {
         flex-direction: column;
-        padding: 2.5rem;
+        padding: 2rem;
     }
 
     .allergie h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .allergie p {
-        font-size: 1.6rem;
+        font-size: 1.25rem;
     }
 
     .ideeenbox p {
