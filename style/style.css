@@ -443,6 +443,9 @@ hr {
     width: 80%;
     background-color: var(--color-grey);
     border-radius: 0.5rem;
+    -webkit-box-shadow: 10px 10px 12px 0px rgba(219,159,7,0.38);
+    -moz-box-shadow: 10px 10px 12px 0px rgba(219,159,7,0.38);
+    box-shadow: 10px 10px 12px 0px rgba(219,159,7,0.38);
 }
 
 .products article:hover {
