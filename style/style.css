@@ -637,6 +637,10 @@ footer {
         width: 55%;
         font-size: 1.6rem;
     }
+
+    .footer-content .footerdata {
+        width: 55%;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -792,10 +796,6 @@ footer {
     .footer-content article .painttxt {
         width: 35%;
         font-size: 2rem;
-    }
-
-    .footer-content .footerdata {
-        width: 50%;
     }
 
     .footerdataleft, .footerdataright {
