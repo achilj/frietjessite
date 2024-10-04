@@ -444,7 +444,6 @@ hr {
     width: 80%;
     background-color: var(--color-orange);
     border-radius: 0.75rem;
-    border: #fff solid 0.2rem;
     -webkit-box-shadow: 8px 8px 10px 0px rgba(103, 86, 30, 0.38);
     -moz-box-shadow: 8px 8px 10px 0px rgba(103, 86, 30, 0.38);
     box-shadow: 8px 8px 10px 0px rgba(103, 86, 30, 0.38);
