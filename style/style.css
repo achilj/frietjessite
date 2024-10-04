@@ -796,7 +796,6 @@ footer {
 
     .footer-content .footerdata {
         width: 50%;
-        justify-content: space-between;
     }
 
     .footerdataleft, .footerdataright {
