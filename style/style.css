@@ -444,9 +444,9 @@ hr {
     background-color: var(--color-orange);
     border-radius: 1rem;
     border: #fff solid 0.25rem;
-    -webkit-box-shadow: 10px 10px 12px 0px rgba(219,159,7,0.38);
-    -moz-box-shadow: 10px 10px 12px 0px rgba(219,159,7,0.38);
-    box-shadow: 10px 10px 12px 0px rgba(219,159,7,0.38);
+    -webkit-box-shadow: 15px 15px 17px 0px rgba(219,159,7,0.38);
+    -moz-box-shadow: 15px 15px 17px 0px rgba(219,159,7,0.38);
+    box-shadow: 15px 15px 17px 0px rgba(219,159,7,0.38);
 }
 
 .products article:hover {
