@@ -29,8 +29,51 @@
     </header>
 
     <main>
-        <h1>bel me vooral niet!</h1>
+        <div class="flex flexbox-evenly-center flexbox-column home">
+            <div class="hero-content">
+                <div class="flex flexbox-column welkomtxt">
+                    <h1>CONTACT</h1>
+                </div>
+                <section class="maininfo">
+                    <article>
+                        <h2>ADRES</h2>
+                        <address>GROTE BOLLOSTRAAT 23A</address>
+                        <address>3120 TREMELO</address>
+                    </article>
+                    <article>
+                        <h2>OPENINGSUREN</h2>
+                        <p>WOENSDAG T/M ZONDAG</p>
+                        <p>16:00 - 21:00</p>
+                    </article>
+                </section>
+            </div>
+            <img class="autoimg" src="img/Autovoorkant.png" alt="Frietfan auto">
+        </div>
     </main>
+
+    <section class="flex flexbox-center-center flexbox-column contacteren">
+        <article>
+            <h2>VRAGEN?</h2>
+            <p>Neem contact met ons op via dit formulier! Wij zullen uw vraag zo snel mogelijk beantwoorden. Aarzel dus niet met vragen over ons, allergieen,...</p>
+        </article>
+        <article>
+            <form class="flex flexbox-column">
+                <label for="naam">Naam:</label>
+                <input type="text" name="naam" id="naam" placeholder="Naam" required>
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+
+                <label for="onderwerp">Onderwerp:</label>
+                <input type="text" name="onderwerp" id="onderwerp" placeholder="Onderwerp" required>
+
+                <label for="bericht">Bericht:</label>
+                <textarea name="bericht" id="bericht" placeholder="Bericht" required></textarea>
+
+                <button type="submit">VERSTUUR</button>
+            </form>
+        </article>
+    </section>
 
     <footer>
         <section class="flex flexbox-center-center flexbox-column footer-content">

@@ -479,6 +479,61 @@ hr {
     border-top-right-radius: 0.5rem;
 }
 
+/* Contact */
+.contacteren {
+    background-color: var(--color-grey);
+    padding: 1.25rem 0;
+    border-top: 0.25rem solid var(--color-white);
+    border-bottom: 0.25rem solid var(--color-white);
+    gap: 1.5rem;
+}
+
+.contacteren h2 {
+    font-size: 2.25rem;
+    text-align: center;
+}
+
+.contacteren p {
+    width: 95%;
+    margin: 0 auto;
+    font-size: 1rem;
+    font-style: italic;
+    text-align: center;
+}
+
+.contacteren article form {
+    width: 95%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contacteren article label {
+    font-size: 1.25rem;
+}
+
+.contacteren article form input[type="text"],.contacteren article form input[type="email"],.contacteren article form textarea,.contacteren article form button  {
+    width: 270px;
+    height: 30px;
+    font-size: 1.1rem;
+}
+
+.contacteren article form textarea {
+    height: 60px;
+}
+
+.contacteren article form button {
+    color: var(--color-white);
+    background-color: var(--color-yellow);
+    font-size: 1.25rem;
+    font-weight: 900;
+    border: none;
+    border-radius: 0.3rem;
+    margin-top: 0.5rem;
+}
+
+.contacteren article form button:hover {
+    background-color: var(--color-hover-yellow);
+}
+
 /* Footer Stuff */
 footer {
     background-color: var(--color-orange);
@@ -631,6 +686,15 @@ footer {
     
     .products article {
         width: 40%;
+    }
+
+    .contacteren article form input[type="text"],.contacteren article form input[type="email"],.contacteren article form textarea,.contacteren article form button {
+        width: 450px;
+        height: 30px;
+    }
+
+    .contacteren article form textarea {
+        height: 70px;
     }
 
     .footer-content article .painttxt {
@@ -791,6 +855,31 @@ footer {
 
     .ideeenbox p {
         width: 65%;
+    }
+
+    .contacteren {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .contacteren h2 {
+        font-size: 5rem;
+    }
+    
+    .contacteren p {
+        width: 75%;
+        font-size: 1.15rem;
+    }
+
+    .contacteren article:first-of-type {
+        width: 30%;
+        align-self: flex-start;
+        justify-self: flex-start;
+    }
+
+    .contacteren article form button {
+        font-size: 2rem;
+        height: 50px;
     }
 
     .footer-content article .painttxt {
