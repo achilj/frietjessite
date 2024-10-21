@@ -1,0 +1,355 @@
+/* Kleuren */
+:root {
+    --color-white: #fff;
+    --color-black: #000;
+    --color-yellow: #FFD747;
+    --color-orange: #EA4E1B;
+    --color-grey: #3D3D3C;
+    --color-dark-grey: #7f290c;
+    --color-hover-yellow: #d1a813;
+}
+
+/* Fonts */
+@font-face {
+    font-family: CabinSketch;
+    src: url(fonts/CabinSketch-Bold.ttf);
+}
+
+/* Utility classes */
+.flex { display: flex; }
+
+.flexbox-row { flex-direction: row; }
+
+.flexbox-column { flex-direction: column; }
+
+.flexbox-justify-center { justify-content: center; }
+
+.flexbox-justify-between { justify-content: space-between; }
+
+.flexbox-justify-evenly { justify-content: space-evenly; }
+
+.flexbox-justify-around { justify-content: space-around; }
+
+.flexbox-justify-start { justify-content: flex-start; }
+
+.flexbox-justify-end { justify-content: flex-end; }
+
+.flexbox-align-start { align-items: flex-start; }
+
+.flexbox-align-center { align-items: center; }
+
+.flexbox-align-end { align-items: flex-end; }
+
+.flexbox-center-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.flexbox-between-center {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flexbox-evenly-center {
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.flexbox-around-center {
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Basisstijlen (mobile-first) */
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-white);
+    transition: 0.5s;
+}
+
+a:visited {
+    color: inherit;
+}
+
+address {
+    text-decoration: none;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-yellow);
+    color: var(--color-white);
+}
+
+header {
+    padding: 0.9rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.25rem;
+}
+
+nav img {
+    max-width: 4.4rem;
+    height: auto;
+}
+
+hr {
+    width: 100%;
+    color: var(--color-white);
+}
+
+:where(.navbuttons a) {
+    color: var(--color-white);
+    font-size: 1.4rem;
+    border-radius: 0.3rem;
+    padding: 0.6rem 1.25rem;
+    margin: 0.3rem 0;
+    font-weight: 600;
+}
+
+:where(.navbuttons a):hover {
+    color: var(--color-orange);
+}
+
+.navbuttons a:last-of-type {
+    padding-right: 0;
+}
+
+.navselected {
+    color: var(--color-orange) !important;
+}
+
+.menu-toggle {
+    display: block;
+    cursor: pointer;
+}
+
+.bar {
+    width: 2.2rem;
+    height: 0.3rem;
+    background-color: var(--color-white);
+    margin: 0.4rem 0;
+    transition: 0.4s;
+}
+
+.navlinks {
+    display: none;
+    flex-direction: column;
+    background-color: var(--color-grey);
+    position: absolute;
+    top: 8rem;
+    left: 0;
+    right: 0;
+    padding: 1.25rem;
+    animation: forwards rollOut 0.5s ease-out;
+}
+
+.navlinks.active {
+    display: flex;
+}
+
+@keyframes rollOut {
+    0% {
+        opacity: 0;
+        transform: translateY(-1.25rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navlinks a {
+    margin-bottom: 0.6rem;
+}
+
+/* Content */
+.home {
+    width: 95%;
+    max-width: 2500px;
+    margin: 2.5rem auto;
+    background-color: var(--color-yellow);
+}
+
+.autoimg {
+    width: 100%;
+    margin-top: 0.6rem;
+    animation: slideIn 1.8s ease-out forwards;
+}
+
+/* Keyframe animatie voor autoimg */
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.welkomtxt {
+    margin-top: 0.6rem;
+}
+
+.welkomtxt p {
+    font-size: 1.1rem;
+    color: var(--color-black);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.welkomtxt :is(h1, h2) {
+    white-space: nowrap;
+    max-width: 100%;
+    width: fit-content;
+}
+
+.welkomtxt h1 {
+    font-size: clamp(2rem, 5vw + 1rem, 5.95rem);
+}
+
+.welkomtxt h1:last-child {
+    font-size: clamp(3rem, 6vw + 2rem, 9.45rem);
+}
+
+.welkomtxt p i {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border-radius: 50%;
+    font-size: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+.maininfo article {
+    margin-top: 0.9rem;
+}
+
+.maininfo h2 {
+    font-weight: 900;
+}
+
+article:has(h2) {
+    margin: 2rem 0;
+    color: var(--color-orange);
+    font-size: clamp(1.8rem, 2vw + 1rem, 2.6rem);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.maininfo {
+    width: 100%;
+}
+
+.maininfo address, .maininfo p {
+    font-size: 1.4rem;
+    color: var(--color-black);
+}
+
+@media (min-width: 800px) {
+    hr {
+        width: 55%;
+    }
+
+    nav {
+        padding: 0 2.5rem;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .navlinks {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+        padding: 0;
+        animation: none;
+    }
+
+    .navlinks a {
+        margin: 0 0.3rem;
+    }
+
+    .navbuttons {
+        flex-direction: row;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .navbuttons a {
+        margin: 0 0.3rem;
+    }
+
+    .navbuttons a:last-child {
+        margin-bottom: 0;
+    }
+
+    nav img {
+        max-width: 3rem; /* LOGO DESKTOP */
+    }
+
+    .autoimg {
+        width: 40%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .home {
+        flex-direction: row;
+    }
+
+    .welkomtxt {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        margin-top: 0.6rem;
+    }
+
+    .hero-content {
+        justify-content: start;
+        align-items: start;
+    }
+
+    .welkomtxt h1 {
+        font-size: clamp(3rem, 5vw + 2rem, 4.95rem);
+        white-space: nowrap;
+        max-width: 100%;
+    }
+
+    .welkomtxt h1:last-child {
+        font-size: clamp(4rem, 6vw + 3rem, 7.5rem);
+    }
+
+    .maininfo:has(h2) {
+        font-size: max(2rem, 3vw);
+    }
+}
